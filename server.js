@@ -7,6 +7,10 @@ const posts = require('./routes/api/posts');
 
 const app = express();
 
+// middleware
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 app.get('/', (req, res) => {
   res.send('test')
 });
